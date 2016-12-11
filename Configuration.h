@@ -283,19 +283,19 @@
   #define ENDSTOPPULLUP_YMAX
   #define ENDSTOPPULLUP_ZMAX
   #define ENDSTOPPULLUP_XMIN
-  #define ENDSTOPPULLUP_YMIN
+  //#define ENDSTOPPULLUP_YMIN
   #define ENDSTOPPULLUP_ZMIN
 #endif
  
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
 const bool X_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
 const bool Y_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
-const bool Z_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
+const bool Z_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
 const bool X_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
 const bool Y_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
 const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
 //#define DISABLE_MAX_ENDSTOPS
-#define DISABLE_MIN_ENDSTOPS
+//#define DISABLE_MIN_ENDSTOPS
  
 // Disable max endstops for compatibility with endstop checking routine
 #if defined(COREXY) && !defined(DISABLE_MAX_ENDSTOPS)
@@ -361,7 +361,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
  
 // default settings
  
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 100, 98}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 100, 95}
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 200}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,9000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
  
